@@ -24,6 +24,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import serverConfig from './config';
 
+console.log("my key = " + process.env.GAPI_KEY);
+
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
 
