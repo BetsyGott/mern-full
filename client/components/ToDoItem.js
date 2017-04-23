@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ToDoItem = ({onClick, completed, text}) => (
-  <li
-    onClick={onClick}
-    style={{
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
+const ToDoItem = ({onClick, completed, text, onButtonClick}) => (
+  <li>
+    <span
+      onClick={onClick}
+      style={{
+        textDecoration: completed ? 'line-through' : 'none'
+      }}
+    >
     {text}
+    </span>
+    <button onClick={onButtonClick}>X</button>
   </li>
 );
 
